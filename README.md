@@ -1,8 +1,8 @@
 # Caso: Participantes en una maratón
 
-## Descripcion general
+## Descripción general
 
-Una organizacion deportiva realizará una maratón y necesita gestionar a sus participantes. Cada participante cuenta con un record personal, que representa el mejor tiempo que ha logrado en competencias anteriores. Antes de ingresar a la carrera principal, todos los inscritos deben rendir una prueba de clasificación.
+Una organización deportiva realizará una maratón y necesita gestionar a sus participantes. Cada participante cuenta con un record personal, que representa el mejor tiempo que ha logrado en competencias anteriores. Antes de ingresar a la carrera principal, todos los inscritos deben rendir una prueba de clasificación.
 
 En la prueba de clasificación, cada participante obtiene un tiempo. La organizacion define previamente un tiempo límite, y solo los participantes que logren un tiempo menor a ese limite podran avanzar a la prueba final.
 
@@ -23,3 +23,24 @@ En la prueba final, los participantes clasificados compiten y registran un nuevo
 ## Resultado esperado
 
 El sistema debe permitir identificar que participantes clasificaron a la prueba final, mostrar el orden final de la competencia según los tiempos registrados y actualizar la marca personal de quienes hayan superado su record previo durante la carrera final.
+
+
+```mermaid
+classDiagram
+    class Participant {
+        - int id
+        - String name
+        - double personalRecord
+    }
+
+    class Marathon {
+        - double timeLimit
+        - List~Participant~ participants
+
+        + registerParticipant(Participant participant) void
+
+    }
+
+    Marathon o-- Participant
+
+```
