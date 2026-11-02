@@ -53,11 +53,10 @@ public class Participant {
 
     @Override
     public String toString() {
-        return "Participant{" +
+        return "Participant " +
                 "id:" + id +
                 ", name:'" + name + "'" +
-                ", personal record:" + personalRecord +
-                '}';
+                ", personal record:" + String.format("%.2f", personalRecord);
     }
 
 }

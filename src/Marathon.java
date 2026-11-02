@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Marathon {
@@ -70,7 +72,8 @@ public class Marathon {
         System.out.println("============");
 
         for (Participant participant : qualifiedParticipants) {
-            System.err.println(participant + ", classification time: " + participant.getClassificationTime());
+            System.err.println(participant + ", classification time: "
+                    + String.format("%.2f", participant.getClassificationTime()));
         }
     }
 
@@ -86,6 +89,7 @@ public class Marathon {
             }
 
         }
+        Collections.sort(qualifiedParticipants, Comparator.comparing(Participant::getFinalTime));
     }
 
     public void showFinalResults() {
@@ -94,7 +98,10 @@ public class Marathon {
         System.out.println("============");
 
         for (Participant participant : qualifiedParticipants) {
-            System.err.println(participant + ", classification time: " + participant.getClassificationTime()+ ", final time: " + participant.getFinalTime());
+            System.err.println(
+                    participant +
+                            ", classification time: " + String.format("%.2f", participant.getClassificationTime())
+                            + ", final time: " + String.format("%.2f", participant.getFinalTime()));
         }
 
     }
