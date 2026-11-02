@@ -16,7 +16,7 @@ En la prueba final, los participantes clasificados compiten y registran un nuevo
 
 1. Cada participante debe tener registrado su record personal antes de iniciar el proceso.
 2. Todo participante debe rendir una prueba de clasificacion.
-3. Solo clasifica a la prueba final quien obtenga un tiempo menor al limite establecido.
+3. Solo clasifica a la prueba final quien obtenga un tiempo menor o igual al límite establecido.
 4. La lista final de resultados debe organizarse de acuerdo con los tiempos obtenidos en la prueba final.
 5. Si un participante obtiene en la prueba final un tiempo mejor que su record personal, ese nuevo tiempo reemplaza al record anterior.
 

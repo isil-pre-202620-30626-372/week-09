@@ -14,5 +14,9 @@ public class App {
         
         marathon.displayQualifiedParticipants();
 
+        marathon.finalRace();
+
+        marathon.showFinalResults();
+
         }
 }

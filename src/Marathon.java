@@ -52,10 +52,6 @@ public class Marathon {
     }
 
     public void classificationTest() {
-        System.out.println("============");
-        System.out.println("Classification Test");
-        System.out.println("============");
-
         for (Participant participant : participants) {
 
             double time = Math.random() * 20 + classificationTime - 10;
@@ -76,6 +72,31 @@ public class Marathon {
         for (Participant participant : qualifiedParticipants) {
             System.err.println(participant + ", classification time: " + participant.getClassificationTime());
         }
+    }
+
+    public void finalRace() {
+
+        for (Participant participant : qualifiedParticipants) {
+
+            double time = Math.random() * 20 + classificationTime - 10;
+            participant.setFinalTime(time);
+
+            if (participant.getFinalTime() < participant.getPersonalRecord()) {
+                participant.setPersonalRecord(participant.getFinalTime());
+            }
+
+        }
+    }
+
+    public void showFinalResults() {
+        System.out.println("============");
+        System.out.println("Final race");
+        System.out.println("============");
+
+        for (Participant participant : qualifiedParticipants) {
+            System.err.println(participant + ", classification time: " + participant.getClassificationTime()+ ", final time: " + participant.getFinalTime());
+        }
+
     }
 
 }

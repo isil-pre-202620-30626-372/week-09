@@ -3,6 +3,7 @@ public class Participant {
     private String name;
     private double personalRecord;
     private double classificationTime;
+    private double finalTime;
 
     public Participant(int id, String name, double personalRecord) {
         this.id = id;
@@ -40,6 +41,14 @@ public class Participant {
 
     public void setClassificationTime(double classificationTime) {
         this.classificationTime = classificationTime;
+    }
+
+    public double getFinalTime() {
+        return finalTime;
+    }
+
+    public void setFinalTime(double finalTime) {
+        this.finalTime = finalTime;
     }
 
     @Override
