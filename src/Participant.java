@@ -2,6 +2,7 @@ public class Participant {
     private int id;
     private String name;
     private double personalRecord;
+    private double classificationTime;
 
     public Participant(int id, String name, double personalRecord) {
         this.id = id;
@@ -33,6 +34,13 @@ public class Participant {
         this.personalRecord = personalRecord;
     }
 
+    public double getClassificationTime() {
+        return classificationTime;
+    }
+
+    public void setClassificationTime(double classificationTime) {
+        this.classificationTime = classificationTime;
+    }
 
     @Override
     public String toString() {
@@ -43,5 +51,4 @@ public class Participant {
                 '}';
     }
 
-    
 }

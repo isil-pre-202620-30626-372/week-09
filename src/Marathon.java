@@ -2,20 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Marathon {
-    private double timeLimit;
+    private double classificationTime;
     private List<Participant> participants;
+    private List<Participant> qualifiedParticipants;
 
     public Marathon(double timeLimit) {
-        this.timeLimit = timeLimit;
+        this.classificationTime = timeLimit;
         this.participants = new ArrayList<>();
-    }
-
-    public double getTimeLimit() {
-        return timeLimit;
-    }
-
-    public void setTimeLimit(double timeLimit) {
-        this.timeLimit = timeLimit;
+        this.qualifiedParticipants = new ArrayList<>();
     }
 
     public List<Participant> getParticipants() {
@@ -24,6 +18,22 @@ public class Marathon {
 
     public void setParticipants(List<Participant> participants) {
         this.participants = participants;
+    }
+
+    public double getClassificationTime() {
+        return classificationTime;
+    }
+
+    public void setClassificationTime(double classificationTime) {
+        this.classificationTime = classificationTime;
+    }
+
+    public List<Participant> getQualifiedParticipants() {
+        return qualifiedParticipants;
+    }
+
+    public void setQualifiedParticipants(List<Participant> qualifiedParticipants) {
+        this.qualifiedParticipants = qualifiedParticipants;
     }
 
     public void registerParticipant(Participant participant) {
@@ -35,9 +45,37 @@ public class Marathon {
         System.out.println("Participants");
         System.out.println("============");
 
-        for (Participant participant: participants) {
+        for (Participant participant : participants) {
             System.err.println(participant);
         }
 
     }
+
+    public void classificationTest() {
+        System.out.println("============");
+        System.out.println("Classification Test");
+        System.out.println("============");
+
+        for (Participant participant : participants) {
+
+            double time = Math.random() * 20 + classificationTime - 10;
+            participant.setClassificationTime(time);
+
+            if (participant.getClassificationTime() <= classificationTime) {
+                qualifiedParticipants.add(participant);
+            }
+
+        }
+    }
+
+    public void displayQualifiedParticipants() {
+        System.out.println("============");
+        System.out.println("Qualified participants");
+        System.out.println("============");
+
+        for (Participant participant : qualifiedParticipants) {
+            System.err.println(participant);
+        }
+    }
+
 }
