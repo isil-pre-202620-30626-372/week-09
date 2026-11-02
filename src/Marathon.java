@@ -74,7 +74,7 @@ public class Marathon {
         System.out.println("============");
 
         for (Participant participant : qualifiedParticipants) {
-            System.err.println(participant);
+            System.err.println(participant + ", classification time: " + participant.getClassificationTime());
         }
     }
 

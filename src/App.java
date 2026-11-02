@@ -10,5 +10,9 @@ public class App {
         marathon.registerParticipant(participant02);
         marathon.displayParticipants();
 
+        marathon.classificationTest();
+        
+        marathon.displayQualifiedParticipants();
+
         }
 }
