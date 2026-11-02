@@ -6,8 +6,8 @@ public class Marathon {
     private List<Participant> participants;
     private List<Participant> qualifiedParticipants;
 
-    public Marathon(double timeLimit) {
-        this.classificationTime = timeLimit;
+    public Marathon(double classificationTime) {
+        this.classificationTime = classificationTime;
         this.participants = new ArrayList<>();
         this.qualifiedParticipants = new ArrayList<>();
     }
